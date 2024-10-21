@@ -1,0 +1,8 @@
+services:
+  node:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    command: sh -c 'cd bloomlily-app && yarn start'
+    ports:
+      - "3001:3000"
