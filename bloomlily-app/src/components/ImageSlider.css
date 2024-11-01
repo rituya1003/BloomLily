@@ -1,0 +1,69 @@
+.jp_slide_img_wrapper {
+    position: relative;
+    width: 100%;
+    height: 730px; /* 高さを730pxに設定 */
+    overflow: hidden;
+  }
+  
+  .jp_slide_img_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 半透明のオーバーレイ */
+    display: flex;
+    justify-content: flex-end; /* ロゴを右寄りに配置 */
+    align-items: center;
+    padding-right: 20px; /* 右に少し余白を追加 */
+  }
+  
+  .main_catch {
+    text-align: center;
+  }
+  
+  .logo-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .site-logo-toka {
+    width: 300px; /* ロゴの幅を調整 */
+    height: auto;
+  }
+  
+  .image-slider {
+    position: relative;
+    width: 100%;
+    height: 730px; /* スライダーの高さを730pxに設定 */
+    display: flex;
+    /* align-items: center; */
+    overflow: hidden;
+  }
+  
+  .slide-track {
+    display: flex;
+    animation: slide 30s linear infinite; /* アニメーションで画像を自動的にスクロール */
+    width: calc(100% * 2); /* スライドの幅を2倍に設定 */
+  }
+  
+  .slide {
+    width: 100vw; /* 各スライドの幅を画面の幅に設定 */
+    height: 730px; /* 各スライドの高さも730pxに設定 */
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+
+  }
+  
+  /* スライドアニメーション */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* -50%に設定することで、半分の幅だけ移動 */
+    }
+  }
+  
+  

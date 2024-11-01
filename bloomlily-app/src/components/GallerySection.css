@@ -1,0 +1,42 @@
+.gallery-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .gallery-section {
+    padding: 40px 20px; /* セクションの上下のパディングと左右のパディング */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.gallery-title {
+    font-size: 96px; /* タイトルのフォントサイズを96pxに設定 */
+    font-weight: normal; /* 太さを普通に設定 */
+    margin-bottom: 20px; /* タイトルの下のマージン */
+}
+
+.gallery-grid {
+    display: grid; /* グリッドレイアウトを使用 */
+    grid-template-columns: repeat(3, 1fr); /* 3列のグリッドを作成 */
+    gap: 20px; /* グリッドアイテムの間隔 */
+    justify-items: center; /* アイテムを中央揃え */
+}
+
+.gallery-image {
+    width: 333px;
+    height: 300px;
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける */
+    transition: transform 0.3s ease-in-out; /* ホバー時のトランジション効果 */
+    object-fit: cover; /* 画像が枠に収まるように切り取る */
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.05); /* ホバー時に少し拡大 */
+}
+
+.gallery-item-title {
+    margin-top: 10px; /* タイトルの上のマージン */
+    font-size: 1.2rem; /* タイトルのフォントサイズ */
+    font-weight: 500; /* フォントの太さ */
+    color: #333; /* フォントの色 */
+}
