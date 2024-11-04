@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Meie Script';
+    src: url('../assets/fonts/MeieScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Tsukushi A Round Gothic';
+    src: url('../assets/fonts/TsukushiARoundGothicRegular.ttf') format('truetype');
+}
+
+
+section {
+    position: relative;
+    padding-top: 10px;
+    margin-top: 20px;
+  }
+  
+  section::before {
+    content: "";
+    display: block;
+    width: calc(100% - 200px); /* 全体幅から左右40pxずつ消す */
+    border-top: 2px dotted #ccc;
+    margin: 0 auto;
+  }
+  
+.about-container {
+    padding: 0;
+    margin: 0;
+}
+
+.about-header {
+  text-align: center;
+  margin: 60px 0 40px;
+}
+
+.about-header p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.site-logo {
+    width: 150px; /* ロゴの幅を調整 */
+}
+
+.special-text {
+    color: #A9CFFF;
+  }
+
+.about-features {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.about-features h2{
+    font-family: 'Meie Script', cursive;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature-item {
+    position: relative;
+    width: 500px;
+    text-align: center;
+  }
+  
+  .feature-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+.feature-item h3,
+.feature-item .feature-description {
+  position: absolute;
+  color: #555; /* 文字色を画像の上で目立たせるために白に設定 */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.feature-item h3 {
+  top: 30%; 
+  font-size: 24px;
+  margin: 5px;
+}
+
+.feature-item .feature-description {
+  top: 40%; 
+}
+
+.feature-item p {
+  font-size: 16px;
+  margin: 5px 0;
+}  
+
+.about-process {
+  margin-bottom: 40px;
+}
+
+.about-process h2 {
+  font-family: 'Meie Script', cursive;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.process-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.process-list li {
+    font-size: 18px;
+    margin: 75px 0 10px;
+    color: #EBCC68; /* 色を指定 */
+    font-size: 32px;
+  }
+
+  .step-font {
+    font-family: 'Meie Script', sans-serif;
+  }
+  
+
+  .about-creator {
+    text-align: center;
+    font-family: serif;
+  }
+  
+  .about-creator h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  
+  .creator-profile {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+  
+  .feature-background {
+    width: 1200px;
+  }
+  
+  .content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .creator-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+  
+  .creator-details {
+    text-align: left;
+    font-size: 1.2em;
+  }
+  
+  .creator-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .creator-details p {
+    margin: auto;
+    white-space: nowrap;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
