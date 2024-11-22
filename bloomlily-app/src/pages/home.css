@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Meie Script';
     src: url('../assets/fonts/MeieScript-Regular.ttf') format('truetype');
@@ -16,7 +15,7 @@
     font-family: 'Tsukushi A Round Gothic', sans-serif; /* デフォルトを日本語のフォントに */
   }
   
-  h1, h2, h3, h4, h5, h6, p {
+  h1, h3, h4, h5, h6, p {
     font-family: 'Tsukushi A Round Gothic', sans-serif;
   }
   

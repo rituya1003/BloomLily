@@ -36,11 +36,7 @@ const ImageSlider = () => {
         <div className="slide-track">
           {/* Firebaseから取得した画像を表示 */}
           {images.map((image, index) => (
-            <div
-              key={index}
-              className="slide"
-              style={{ backgroundImage: `url(${image})` }}
-            />
+            <img src={image} />
           ))}
         </div>
       </div>
