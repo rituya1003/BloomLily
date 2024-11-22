@@ -22,7 +22,7 @@ const GallerySection = () => {
           .filter(item => item.name.match(/\.(jpg|jpeg|png|gif)$/)) // 画像ファイルのみをフィルタリング
           .map((item) => getDownloadURL(item)) // 各アイテムのURLを取得
       );
-
+      console.log(urls); 
       // ランダムに6枚の画像を選択
       const randomUrls = selectRandomImages(urls, 6);
       

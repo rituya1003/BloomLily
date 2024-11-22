@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Tsukushi A Round Gothic';
+    src: url('../assets/fonts/TsukushiARoundGothicRegular.ttf') format('truetype');
+}
+
+.event-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 40px;
+}
+
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 550px;
+    padding: 20px;
+    flex-basis: calc(50% - 20px); /* 2枚並べるために50%幅に設定 */
+    max-width: 600px; /* 最大幅を600pxに設定 */
+}
+  
+  .account-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .account-info .account-name {
+    font-weight: bold;
+    margin-right: auto;
+  }
+  
+  .badge {
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 15px;
+    color: #fff;
+  }
+  
+  .badge.organizer {
+    background-color: #ffd700;
+  }
+  
+  .badge.artist {
+    background-color: #87ceeb;
+  }
+  
+  .event-title,
+  .venue,
+  .date,
+  .tags {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .p-size{
+    font-size: 30px;
+  }
+  
+  .tags span {
+    display: inline-block;
+    margin-right: 5px;
+    color: #666;
+  }
+  
+  .design-image {
+    width: auto;
+    height: 200px;
+    background-color: #eee;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .comment {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px; /* 角丸を設定 */
+    border: 1px solid #ddd; /* 境界線を追加 */
+}
+
+  

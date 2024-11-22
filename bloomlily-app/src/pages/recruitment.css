@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Tsukushi A Round Gothic';
+    src: url('../assets/fonts/TsukushiARoundGothicRegular.ttf') format('truetype');
+}
+
+
+.search-and-create {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.search-bar {
+    width: 1030px;
+    height: 23px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;  /* 角丸 */
+    font-size: 16px;
+    outline: none;
+    margin-top: 55px;
+    font-family: 'Tsukushi A Round Gothic', sans-serif;
+}
+
+.create-button {
+    width: 160px;
+    height: 45px;
+    background-color: #FFFFFF;
+    color: #9CA3AF;
+    border: 1px solid #ccc;
+    border-radius: 8px;  /* 角丸 */
+    cursor: pointer;
+    font-family: 'Tsukushi A Round Gothic', sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 55px;
+}
+
