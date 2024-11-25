@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Meie Script';
+    src: url('../assets/fonts/MeieScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Tsukushi A Round Gothic';
+    src: url('../assets/fonts/TsukushiARoundGothicRegular.ttf') format('truetype');
+}
+
+.content-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+/* .sidebar {
+    width: 400px;
+    height: 700px;
+    margin-right: 20px;
+    background-color: #cce5ff;
+    padding: 10px;
+    border-radius: 10px;
+} */
+
+.sidebar {
+    width: 400px;
+    height: 700px; /* サイドバーの高さは固定 */
+    margin-right: 20px;
+    background-color: #cce5ff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card-grid {
+    max-height: 600px; /* 必要に応じて高さを調整 */
+    overflow-y: auto; /* 内容が多くなったらスクロール */
+    padding-right: 10px; /* スクロールバーが隠れないように少し余白 */
+}
+
+
+.tab-container {
+    display: flex;
+    justify-content: start; /* タブを左詰めに */
+    margin-bottom: 10px;
+    white-space: nowrap; /* 横並びで改行しないように */
+    width: 100%; /* 必要に応じて幅を調整 */
+}
+
+.tab {
+    display: inline-block; /* 横並び用にインラインブロックに */
+    width: 120px;
+    height: 30px;
+    background-color: #fff;
+    padding: 10px;
+    margin-right: 10px; /* 横スクロール時の隙間 */
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.main-content {
+    width: 950px;
+    height: 720px;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* h2 と canvas-area の間隔 */
+}
+
+.total-container {
+    background-color: #cce5ff;
+    border-radius: 10px;
+    height: 50px;
+    font-family: 'Meie Script';
+}
+
+.total-container h2{
+    font-size: 40px;
+}
+
+.canvas-area {
+    flex-grow: 1; /* キャンバスエリアが残りのスペースを占める */
+    height: 500px; /* 必要に応じて調整 */
+    background-color: #cce5ff;
+    border-radius: 10px;
+}
+
+.right-content {
+    width: 200px;
+    height: 720px;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* h2 と canvas-area の間隔 */
+}
+
+.save-button {
+    background-color: #cce5ff;
+    border-radius: 10px;
+    height: 50.5px;
+    font-family: 'Tsukushi A Round Gothic';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.setting-area{
+    flex-grow: 1; /* キャンバスエリアが残りのスペースを占める */
+    height: 500px; /* 必要に応じて調整 */
+    background-color: #cce5ff;
+    border-radius: 10px;
+}

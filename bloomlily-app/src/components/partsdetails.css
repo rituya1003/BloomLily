@@ -1,0 +1,51 @@
+.parts-details-container {
+  padding: 20px;
+}
+
+/* カラーピッカー */
+.color-picker {
+  margin-bottom: 10px;
+}
+
+.color-picker input {
+  width: 100px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+/* テキストボックス */
+.text-box {
+  margin-bottom: 10px;
+}
+
+.text-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* プルダウンメニュー */
+.dropdown {
+  margin-bottom: 10px;
+}
+
+.dropdown select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* 選択されたもののプレビュー表示 */
+.selected-image-preview {
+  background-color: white; /* 背景色を白 */
+  border-radius: 8px; /* 角を丸く */
+  overflow: hidden; /* 角丸を画像にも適用 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影 */
+  width: 150px; /* 幅150px */
+  height: 150px; /* 高さ150px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

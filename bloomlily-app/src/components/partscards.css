@@ -1,0 +1,26 @@
+.parts-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 150px); /* 1行に2枚、サイズ150px */
+  gap: 20px; /* カード間の隙間 */
+  padding: 10px;
+  justify-content: center;
+}
+
+.part-card {
+  background-color: white; /* 背景色を白 */
+  border-radius: 8px; /* 角を丸く */
+  overflow: hidden; /* 角丸を画像にも適用 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影 */
+  width: 150px; /* 幅150px */
+  height: 150px; /* 高さ150px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.part-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+  border-radius: 8px; /* 画像も角丸に */
+}
