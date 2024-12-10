@@ -1,0 +1,172 @@
+/* フォントの読み込み */
+@font-face {
+    font-family: 'Meie Script';
+    src: url('../assets/fonts/MeieScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Tsukushi A Round Gothic';
+    src: url('../assets/fonts/TsukushiARoundGothicRegular.ttf') format('truetype');
+}
+
+/* ロゴのコンテナ */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 80px; /* ロゴとボタンの間に余白を追加 */
+}
+
+.login-site-logo {
+    width: 500px;
+    height: auto;
+}
+
+/* ボタンのコンテナ */
+.container {
+    display: flex;
+    flex-direction: column; /* 縦方向に配置 */
+    align-items: center;
+    gap: 15px; /* ボタン間の余白 */
+}
+
+/* 共通のボタンスタイル */
+button {
+    padding: 10px 20px;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* ログインボタンのスタイル */
+.buttonlogin {
+    width: 300px;
+    height: 50px;
+    background-color: #87ceeb;
+    color: #000000;
+    font-family: 'Meie Script', sans-serif;
+}
+
+/* 新規登録ボタンのスタイル */
+.buttonsignup {
+    font-family: 'Meie Script', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    background: none; /* 背景なし */
+    border: none; /* ボーダーなし */
+    cursor: pointer;
+}
+
+.buttonsignup:hover {
+    text-decoration: underline; /* ホバー時の視覚的な効果 */
+}
+
+/* signup-containerのスタイル */
+.signup-container {
+    width: 400px;
+    background-color: #87ceeb; /* 背景色 */
+    padding: 20px; /* 内側の余白 */
+    border-radius: 20px; /* 角丸 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 影を追加 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* 横方向の中央配置 */
+    text-align: center;
+}
+
+/* New Account のタイトルスタイル */
+.signup-container h1 {
+    font-family: 'Meie Script', sans-serif; /* フォントをMeie Scriptに設定 */
+    font-size: 36px; /* サイズを調整 */
+    color: #000; /* テキスト色 */
+    margin-bottom: 20px; /* 下部の余白 */
+}
+
+/* フォームのスタイル */
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form label {
+    margin-bottom: 10px;
+    font-size: 16px; /* フォントサイズ */
+    color: #000; /* テキスト色 */
+}
+
+form input {
+    width: 90%; /* 幅を調整 */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Registrationボタンのスタイル */
+form button {
+    width: 300px;
+    height: 50px;
+    font-family: 'Meie Script', sans-serif; /* フォントをMeie Scriptに設定 */
+    font-size: 30px; /* サイズを調整 */
+    background-color: #FFF79C; /* 背景色 */
+    color: #000; /* テキスト色 */
+    border: none; /* ボーダーなし */
+    border-radius: 5px; /* 角丸 */
+    padding: 10px 20px; /* 内側の余白 */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* 変化のアニメーション */
+    margin-top: 10px;
+}
+
+/* 戻るボタンのスタイル */
+.signup-container .back-button {
+    background: none; /* 背景なし */
+    border: none; /* ボーダーなし */
+    font-size: 14px; /* フォントサイズ */
+    color: #000; /* テキスト色 */
+    margin-top: 10px; /* 上部の余白 */
+    cursor: pointer;
+    text-decoration: underline; /* 下線をつける */
+}
+
+.signup-container .back-button:hover {
+    color: #444; /* ホバー時のテキスト色 */
+}
+
+.return {
+    font-family: 'Tsukushi A Round Gothic', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    background: none; /* 背景なし */
+    border: none; /* ボーダーなし */
+    cursor: pointer;
+}
+
+.return:hover {
+    text-decoration: underline; /* ホバー時の視覚的な効果 */
+}
+
+/* CSSファイルに追加 */
+.webauthn-modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+    display: none;
+    transition: transform 0.3s ease-out;
+    transform: translateY(100%);
+  }
+  
+  .webauthn-modal.visible {
+    display: block;
+    transform: translateY(0);
+  }
+  

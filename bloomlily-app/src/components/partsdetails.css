@@ -5,6 +5,7 @@
 /* カラーピッカー */
 .color-picker {
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 .color-picker input {
@@ -34,6 +35,7 @@
   width: 100%;
   padding: 10px;
   font-size: 14px;
+  margin-top: 30px;
 }
 
 /* 選択されたもののプレビュー表示 */
@@ -48,4 +50,38 @@
   justify-content: center;
   align-items: center;
 }
+
+textarea{
+  margin-top: 30px;
+  width: 144px;
+  height: 144px;
+}
+
+input[type="file"] {
+  display: none; /* 実際のファイル選択ボタンを非表示にする */
+}
+
+.custom-file-upload {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.uploaded-image-preview {
+  margin-top: 30px;
+  width: 144px;
+  height: 300px;
+  object-fit: contain; /* 画像を要素の枠内に調整 */
+  border: 1px solid #ccc; /* 任意: 枠線を追加 */
+}
+
+.icon-container,.pen-settings,.eraser-settings{
+  margin-top: 30px;
+}
+
 
