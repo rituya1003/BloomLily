@@ -32,7 +32,7 @@ const PartsDetails: React.FC<PartsDetailsProps> = ({ partType, partName }) => {
     if (partType === 'flowers' && partName) {
       fetchNonBalloonImages('Flower', partName);
     } else if (partType === 'balloon' && partName) {
-      fetchBalloonImages(partName); // 既存のfetchBalloonImagesはそのまま
+      fetchBalloonImages(partName); 
     } else if (partType !== 'balloon' && partName) {
       fetchNonBalloonImages(partType, partName); // その他のパーツタイプを処理
     }
@@ -180,26 +180,35 @@ const fetchNonBalloonImages = async (partType: string, imageName: string) => {
 
       {/* Balloon */}
       {partType === 'balloon' && (
-        <div className="dropdown">
-          {selectedImage && (
-            <img src={selectedImage} alt="Selected balloon preview" className="selected-image-preview" />
-          )}
-          <select
-            value={color}
-            onChange={(e) => {
-              setColor(e.target.value);
-              handleImageSelect(e.target.value);
-            }}
-          >
-            <option value="">選択してください</option>
-            {imageNames.map((option, index) => (
-              <option key={index} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
+  <div className="dropdown">
+    {selectedImage && (
+      <img
+        src={selectedImage}
+        alt="Selected balloon preview"
+        className="selected-image-preview"
+        draggable="true" // ドラッグ可能に設定
+        onDragStart={(e) => {
+          e.dataTransfer.setData('image/png', selectedImage); // ドラッグデータとして画像URLを設定
+        }}
+      />
+    )}
+    <select
+      value={color}
+      onChange={(e) => {
+        setColor(e.target.value);
+        handleImageSelect(e.target.value);
+      }}
+    >
+      <option value="">選択してください</option>
+      {imageNames.map((option, index) => (
+        <option key={index} value={option}>
+          {option}
+        </option>
+      ))}
+    </select>
+  </div>
+)}
+
 
       {/* Others */}
       {partType === 'others' && (
@@ -232,28 +241,28 @@ const fetchNonBalloonImages = async (partType: string, imageName: string) => {
 {partName === 'pen' && (
   <div>
     <div className="icon-container">
-      {/* Pen Icon */}
+      {/* ペン */}
       <button onClick={() => setIsEraser(false)} className="icon-button">
         <img src={Vector} alt="Pen Icon" className="icon" />
       </button>
 
-      {/* Eraser Icon */}
+      {/* 消しゴム */}
       <button onClick={() => setIsEraser(true)} className="icon-button">
         <img src={eraser} alt="Eraser Icon" className="icon" />
       </button>
 
-      {/* Color Palette Icon */}
+      {/* カラーパレット */}
       <button
         onClick={() => setShowColorPalette(!showColorPalette)}className="icon-button">
         <img src={colorpalette} alt="Color Palette Icon" className="icon" />
       </button>
     </div>
 
-    {/* Settings Section (appears when an icon is clicked) */}
+
     <div className="settings">
       {!isEraser && (
         <div className="pen-settings">
-          {/* Color Picker (visible only when the color palette icon is clicked) */}
+
           {showColorPalette && (
             <div className="pen-option">
               <input
@@ -265,7 +274,7 @@ const fetchNonBalloonImages = async (partType: string, imageName: string) => {
             </div>
           )}
 
-          {/* Pen Thickness */}
+
           <div className="pen-option">
             <input
               type="range"
@@ -281,7 +290,7 @@ const fetchNonBalloonImages = async (partType: string, imageName: string) => {
 
       {isEraser && (
         <div className="eraser-settings">
-          {/* Eraser Thickness */}
+
           <div className="eraser-option">
             <input
               type="range"

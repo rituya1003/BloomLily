@@ -62,7 +62,7 @@
 
 
 .main-content {
-    width: 950px;
+    width: 1200px;
     height: 720px;
     border-radius: 10px;
     margin-right: 20px;
@@ -83,8 +83,8 @@
 }
 
 .canvas-area {
-    flex-grow: 1; /* キャンバスエリアが残りのスペースを占める */
-    height: 500px; /* 必要に応じて調整 */
+    flex-grow: 1200px; /* キャンバスエリアが残りのスペースを占める */
+    height: 720px; /* 必要に応じて調整 */
     background-color: #cce5ff;
     border-radius: 10px;
 }

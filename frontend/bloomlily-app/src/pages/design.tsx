@@ -39,7 +39,7 @@ const Design: React.FC = () => {
         </div>
         <div className="main-content">
           <div className="total-container">
-            <h2>Total:</h2>
+            <h2></h2>
           </div>
           <div className="canvas-area">
             {/* キャンバスエリア */}

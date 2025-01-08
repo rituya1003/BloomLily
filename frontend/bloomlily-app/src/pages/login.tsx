@@ -13,7 +13,11 @@ function Login() {
   // WebAuthn 対応の登録
   const handleWebAuthnRegistration = async () => {
     try {
-      const options = await fetch("/api/webauthn/register-options").then((res) => res.json());
+      const options = await fetch("/api/webauthn/register-options", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }) // メールアドレスをサーバーに送信
+      }).then((res) => res.json());
 
       const credential = await WebAuthn.startRegistration(options);
 
@@ -24,8 +28,14 @@ function Login() {
       });
 
       alert("WebAuthn 登録に成功しました");
-    } catch (err) {
-      console.error("WebAuthn 登録失敗:", err);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        console.error("WebAuthn 登録失敗:", err.message);
+        alert("WebAuthn 登録に失敗しました: " + err.message);
+      } else {
+        console.error("WebAuthn 登録失敗:", err);
+        alert("WebAuthn 登録に失敗しました");
+      }
     }
   };
 
@@ -35,9 +45,15 @@ function Login() {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       console.log("登録成功:", userCredential.user);
 
-      handleWebAuthnRegistration();
-    } catch (error) {
-      // console.error("登録エラー:", error.message); 
+      await handleWebAuthnRegistration();
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error("登録エラー:", error.message);
+        alert("ユーザー登録に失敗しました: " + error.message);
+      } else {
+        console.error("登録エラー:", error);
+        alert("ユーザー登録に失敗しました");
+      }
     }
   };
 
@@ -47,7 +63,12 @@ function Login() {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("ログイン成功:", userCredential.user);
 
-      const options = await fetch("/api/webauthn/login-options").then((res) => res.json());
+      const options = await fetch("/api/webauthn/login-options", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      }).then((res) => res.json());
+
       const assertion = await WebAuthn.startAuthentication(options);
 
       await fetch("/api/webauthn/login", {
@@ -57,14 +78,20 @@ function Login() {
       });
 
       alert("ログイン成功");
-    } catch (error) {
-      // console.error("ログインエラー:", error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error("ログインエラー:", error.message);
+        alert("ログインに失敗しました: " + error.message);
+      } else {
+        console.error("ログインエラー:", error);
+        alert("ログインに失敗しました");
+      }
     }
   };
 
   return (
     <div>
-      <div className="logo-container">
+      <div className="logocontainer">
         <img src={Logo} alt="Logo" className="login-site-logo" />
       </div>
       {isSignUpMode ? (
